@@ -1,0 +1,8 @@
+sudo apt -y install software-properties-common
+sudo apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
+sudo add-apt-repository 'deb [arch=amd64] http://mariadb.mirror.globo.tech/repo/10.5/ubuntu focal main'
+sudo apt update -y
+apt-get install mariadb mariadb-client -y
+sudo mysql_secure_installation
+systemctl status mysql
+mysql -u -p
